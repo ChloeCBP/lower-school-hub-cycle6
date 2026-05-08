@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lower School Hub — Today</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
+  <style>
+    body { background: #faf9f6; }
+    .top-bar { background: linear-gradient(90deg,#fc5e48,#f39820,#22c973,#693efe,#fc5e48); }
+    .site-header { background: #faf9f6; border-bottom: 4px solid #693efe; }
+    .branding h1 { color: #693efe; }
+    .branding .tagline { background: #eee9ff; color: #693efe; border: 1px solid #693efe; }
+    .main-nav { background: #faf9f6; border-bottom: 2px solid #eee9ff; }
+    .main-nav a { border-color: #eee9ff; color: #1a1a2e; }
+    .main-nav a:hover { background: #eee9ff; color: #693efe; }
+    .main-nav a.active { background: #693efe; color: #fff; border-color: #693efe; }
+    .page-title { color: #693efe; }
+    .section-title { color: #693efe; }
+    .hero-card { background: #faf9f6; border-color: #eee9ff; border-left-color: #693efe; }
+    .badge { background: #eee9ff; color: #693efe; border: 1px solid #693efe; }
+    .notice { background: #fffbf4; border-left-color: #f39820; }
+    .notice .section-title { color: #b36800; }
+    .card { border-color: #eee9ff; }
+    .green-card { border-left-color: #fc5e48; background: #fff7f6; }
+    .green-card .section-title { color: #a02010; }
+    .blue-card { border-left-color: #f39820; background: #fffbf4; }
+    .blue-card .section-title { color: #b36800; }
+    .blue-card .info-box h3 { color: #b36800; }
+    .lit-card-soft { border-left-color: #22c973; background: #f2fdf7; }
+    .lit-card-soft .section-title { color: #0a7a44; }
+    .theme-card-soft { border-left-color: #693efe; background: #eee9ff; }
+    .theme-card-soft .section-title { color: #3d1fae; }
+    .table-card { border-color: #eee9ff; }
+    th { background: #eee9ff; color: #693efe; }
+    .highlight { background: #f7f5ff; }
+    .info-box { background: #faf9f6; border-color: #eee9ff; }
+    .info-box h3 { color: #693efe; }
+    .footer { background: #faf9f6; border-top-color: #eee9ff; color: #898989; }
+    a { color: #693efe; }
+  </style>
+</head>
+<body data-page="today">
+  <div class="top-bar"></div>
+
+  <header class="site-header">
+    <div class="branding">
+      <div class="subtitle">Lower School Hub</div>
+      <h1>Today</h1>
+      <div class="tagline">Learning together, one step at a time</div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" data-page="today">Today</a>
+    <a href="literacy.html" data-page="literacy">Literacy Lab</a>
+    <a href="theme.html" data-page="theme">Theme Workshop</a>
+    <a href="https://prisma-daily-check.web.app/student.html" target="_blank">Student Daily Check</a>
+    <a href="https://classroom.google.com/c/Nzc0MDk2MDExMjM1" target="_blank">Google Classroom</a>
+    <a href="parents.html" data-page="parents">Parents</a>
+  </nav>
+
+  <main class="container">
+    <h2 class="page-title" id="todayPageTitle">Today</h2>
+
+    <div id="todayNotice"></div>
+
+    <section class="hero-card" id="todayHero">
+      <h3 class="section-title">What's happening today</h3>
+      <p><strong>Cycle 6: Changemakers</strong> — Health &amp; Wellbeing</p>
+      <div class="badge" id="todayBadge">Week 1</div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card green-card">
+        <h3 class="section-title">Daily Practice</h3>
+        <ul class="pretty-list" id="dailyPracticeList"></ul>
+      </div>
+
+      <div class="card blue-card">
+        <h3 class="section-title">Today's Live Sessions</h3>
+        <div class="info-box">
+          <h3>Literacy Lab</h3>
+          <p id="litLiveSession">No live session today</p>
+        </div>
+        <div class="info-box" style="margin-top:.75rem;">
+          <h3>Theme Workshop</h3>
+          <p id="themeLiveSession">No live session today</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card lit-card-soft" id="litOverviewCard">
+        <h3 class="section-title">Literacy Lab</h3>
+        <div id="litOverviewContent"></div>
+      </div>
+
+      <div class="card theme-card-soft" id="themeOverviewCard">
+        <h3 class="section-title">Theme Workshop</h3>
+        <div id="themeOverviewContent"></div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="table-card">
+        <h3 class="section-title">Important Dates</h3>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Date</th><th>Event</th></tr>
+            <tr><td>Mon May 18</td><td>🎉 First Day of Cycle 6!</td></tr>
+            <tr><td>Mon May 25</td><td>No Prisma — Memorial Day</td></tr>
+            <tr><td>Thu May 29</td><td>💙 Prisma's Day of Service</td></tr>
+            <tr><td>Mon Jun 1</td><td>Badge Tracker Due</td></tr>
+            <tr><td>Tue Jun 2</td><td>Expo Day Prep Due</td></tr>
+            <tr><td>Wed Jun 3</td><td>Expo Day Prep</td></tr>
+            <tr><td>Thu Jun 4</td><td>🎉 Cycle 6 Expo Day</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <h3 class="section-title" id="thisWeekHeading">This Week</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Literacy Lab</th>
+                <th>Theme Workshop</th>
+              </tr>
+            </thead>
+            <tbody id="thisWeekBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Lower School Hub</footer>
+  <script src="script.js"></script>
+</body>
+</html>

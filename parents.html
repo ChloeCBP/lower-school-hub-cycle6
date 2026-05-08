@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lower School Hub — Parents</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
+  <style>
+    :root {
+      --purple: #693efe;
+      --purple-light: #eee9ff;
+      --coral: #fc5e48;
+      --peach: #ffd3ca;
+      --orange: #f39820;
+      --green: #22c973;
+      --gray: #898989;
+      --offwhite: #faf9f6;
+    }
+
+    body { background: var(--offwhite); }
+
+    .top-bar {
+      background: linear-gradient(90deg, #fc5e48, #f39820, #22c973, #693efe, #fc5e48);
+    }
+
+    .site-header {
+      background: var(--offwhite);
+      border-bottom: 4px solid var(--purple);
+    }
+
+    .branding h1 { color: var(--purple); }
+
+    .branding .tagline {
+      background: var(--purple-light);
+      color: var(--purple);
+      border: 1px solid var(--purple);
+    }
+
+    .main-nav {
+      background: var(--offwhite);
+      border-bottom: 2px solid var(--purple-light);
+    }
+
+    .main-nav a { border-color: var(--purple-light); }
+    .main-nav a:hover { background: var(--purple-light); color: var(--purple); }
+    .main-nav a.active { background: var(--purple); color: #fff; border-color: var(--purple); }
+
+    .page-title { color: var(--purple); }
+    .section-title { color: var(--purple); }
+
+    .notice {
+      background: #fffbf4;
+      border-left-color: var(--orange);
+    }
+    .notice .section-title { color: #b36800; }
+
+    .footer {
+      background: var(--offwhite);
+      border-top-color: var(--purple-light);
+      color: var(--gray);
+    }
+
+    .parent-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: #fff;
+      border: 1.5px solid var(--purple-light);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(105,62,254,0.06);
+    }
+
+    .skill-head {
+      padding: 0.9rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+
+    .skill-head.week1 { background: var(--purple); }
+    .skill-head.week2 { background: var(--orange); }
+    .skill-head.week3 { background: var(--green); }
+
+    .skill-head .small {
+      font-size: 0.88rem;
+      font-weight: 800;
+      opacity: 0.85;
+    }
+
+    .skill-body {
+      padding: 0.9rem;
+      background: #fff;
+    }
+
+    .skill-sec {
+      border: 1.5px solid var(--purple-light);
+      border-radius: 14px;
+      padding: 0.85rem 0.9rem;
+      margin-bottom: 0.75rem;
+      background: #fff;
+    }
+
+    .skill-sec:last-child { margin-bottom: 0; }
+
+    .skill-sec.lit {
+      background: #f2fdf7;
+      border-color: #a8eeca;
+    }
+
+    .skill-sec.theme {
+      background: var(--peach);
+      border-color: #f9a090;
+    }
+
+    .skill-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+      color: var(--purple);
+    }
+
+    .skill-sec.lit .skill-title { color: #0a7a44; }
+    .skill-sec.theme .skill-title { color: #8a2010; }
+
+    .skill-list {
+      font-size: 1rem;
+      line-height: 1.55;
+      color: #1a1a2e;
+    }
+
+    .week-overview {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #1a1a2e;
+      margin: 0 0 1rem 0;
+    }
+
+    .checklist-items {
+      font-size: 1rem;
+      line-height: 2;
+      color: #1a1a2e;
+    }
+
+    .ask-divider {
+      border: none;
+      border-top: 1.5px solid var(--purple-light);
+      margin: 1rem 0;
+    }
+
+    .ask-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--purple);
+      margin-bottom: 0.6rem;
+    }
+
+    .ask-list {
+      padding-left: 1.3rem;
+      margin: 0;
+    }
+
+    .ask-list li {
+      font-size: 1rem;
+      line-height: 1.55;
+      color: #1a1a2e;
+      margin-bottom: 0.5rem;
+    }
+
+    .ask-list li:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body data-page="parents">
+  <div class="top-bar"></div>
+
+  <header class="site-header">
+    <div class="branding">
+      <div class="subtitle">Lower School Hub</div>
+      <h1>Parent View</h1>
+      <div class="tagline">Weekly focus, reminders, and support</div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" data-page="today">Today</a>
+    <a href="literacy.html" data-page="literacy">Literacy Lab</a>
+    <a href="theme.html" data-page="theme">Theme Workshop</a>
+    <a href="https://prisma-daily-check.web.app/student.html" target="_blank">Student Daily Check</a>
+    <a href="https://classroom.google.com/c/Nzc0MDk2MDExMjM1" target="_blank">Google Classroom</a>
+    <a href="parents.html" data-page="parents">Parents</a>
+  </nav>
+
+  <main class="container">
+    <h2 class="page-title">Parents</h2>
+
+    <section class="notice">
+      <h3 class="section-title">At-a-Glance View</h3>
+      <p>This page pulls together the weekly learning goals, family checklist items, and conversation starters so you can see the shape of the cycle at a glance. Cycle 6: Changemakers is a 3-week cycle focused on Health &amp; Wellbeing — learners design and complete a personal service project while reflecting on and celebrating their full year at Prisma.</p>
+    </section>
+
+    <div class="parent-grid">
+
+      <div class="skill-card">
+        <div class="skill-head week1">
+          <span>Week 1 · May 18–21</span>
+          <span class="small">Planning</span>
+        </div>
+        <div class="skill-body">
+
+          <div class="skill-sec lit">
+            <div class="skill-title">Literacy skills</div>
+            <div class="skill-list">Reflecting on growth as a reader, writer, and thinker across the full year. Beginning to update their portfolio site to tell the story of each cycle they completed at Prisma, starting with Cycle 1.</div>
+          </div>
+
+          <div class="skill-sec theme">
+            <div class="skill-title">Theme skills</div>
+            <div class="skill-list">Understanding what health and wellbeing means and what it looks like to be a Changemaker. Designing a personal service project plan and learning about the cohort's shared fundraising project.</div>
+          </div>
+
+          <div class="skill-sec">
+            <div class="skill-title">Family checklist + weekly overview</div>
+            <p class="week-overview">This week kicks off the final cycle of the year! Learners are choosing their service project, designing a plan, and beginning to look back on how they've grown. Journal work may include project brainstorms, community reflections, portfolio site updates, and early ideas about who they want to help and how.</p>
+            <div class="checklist-items">
+              □ Learners will work daily in project journal<br>
+              □ Learners will work daily in literacy journal<br>
+              □ Daily Math Practice<br>
+              □ Learners may need your support getting started on their service project this week!
+            </div>
+            <hr class="ask-divider">
+            <div class="ask-label">Ask your learner</div>
+            <ol class="ask-list">
+              <li>What service project are you planning to do, and what community will it help?</li>
+              <li>What does health and wellbeing mean to you, and how does your project connect to it?</li>
+              <li>If you could look back at the very beginning of the school year, what is one way you've already changed as a learner?</li>
+              <li>Which cycle from this year are you most excited to tell the story of on your portfolio site, and why?</li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head week2">
+          <span>Week 2 · May 26–28</span>
+          <span class="small">Doing &amp; Deciding</span>
+        </div>
+        <div class="skill-body">
+
+          <div class="skill-sec lit">
+            <div class="skill-title">Literacy skills</div>
+            <div class="skill-list">Exploring the four Prisma Powers — Initiative &amp; Follow Through, Communication &amp; Collaboration, Applied Curiosity, and Innovator's Mindset — through hands-on challenges like an escape room, a tangram challenge, a curiosity game, and a paper tower build. Reflecting on growth in each power and adding that work to their portfolio site.</div>
+          </div>
+
+          <div class="skill-sec theme">
+            <div class="skill-title">Theme skills</div>
+            <div class="skill-list">Evaluating real organizations across three categories — environment, animals, and people — and debating as a cohort how to distribute fundraising dollars most responsibly and thoughtfully.</div>
+          </div>
+
+          <div class="skill-sec">
+            <div class="skill-title">Family checklist + weekly overview</div>
+            <p class="week-overview">This week learners are in full action mode — completing their service projects, working through hands-on challenges that highlight how much they've grown, and making real decisions about where their cohort's fundraising dollars should go. Note: Monday, May 25 is No Prisma (Memorial Day), so this is a short three-day week.</p>
+            <div class="checklist-items">
+              □ Learners will work daily in project journal<br>
+              □ Learners will work daily in literacy journal<br>
+              □ Daily Math Practice<br>
+              □ Service project should be completed by Thursday, May 29th
+            </div>
+            <hr class="ask-divider">
+            <div class="ask-label">Ask your learner</div>
+            <ol class="ask-list">
+              <li>How is your service project going? What did you do, and what impact did it have on your community?</li>
+              <li>Which type of organization did you vote to fund — environment, animals, or people — and what made you choose that?</li>
+              <li>What is one Prisma Power you feel like you've really grown in this year? What is your evidence?</li>
+              <li>Which hands-on challenge this week was your favorite, and what did it teach you about yourself?</li>
+              <li>Was there a moment this week where you had to push through something hard? What did that feel like?</li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-head week3">
+          <span>Week 3 · Jun 1–4</span>
+          <span class="small">Celebrate &amp; Share</span>
+        </div>
+        <div class="skill-body">
+
+          <div class="skill-sec lit">
+            <div class="skill-title">Literacy skills</div>
+            <div class="skill-list">Finishing and polishing the portfolio site so it tells the full story of the year. Sharing it with the full pod during a celebration session, and reflecting on the reader, writer, and thinker they have become.</div>
+          </div>
+
+          <div class="skill-sec theme">
+            <div class="skill-title">Theme skills</div>
+            <div class="skill-list">Making the final cohort decision on fund distribution, wrapping up personal service project reflections, and preparing to present their Changemaker work with confidence on Expo Day.</div>
+          </div>
+
+          <div class="skill-sec">
+            <div class="skill-title">Family checklist + weekly overview</div>
+            <p class="week-overview">This is the final week of Cycle 6 — and of the school year! Learners are putting finishing touches on their portfolio sites, sharing their stories with the full pod, and presenting their service projects at Expo Day on Thursday, June 4th. This is a week worth celebrating, and families are welcome and encouraged to join Expo Day!</p>
+            <div class="checklist-items">
+              □ Learners will work daily in project journal<br>
+              □ Learners will work daily in literacy journal<br>
+              □ Daily Math Practice<br>
+              □ Badge Tracker is due Monday, June 1<br>
+              □ Expo Day Prep is due Tuesday, June 2<br>
+              □ Expo Day is Thursday, June 4 — celebrate your learner!
+            </div>
+            <hr class="ask-divider">
+            <div class="ask-label">Ask your learner</div>
+            <ol class="ask-list">
+              <li>What is your portfolio site all about, and which cycle or project are you most proud to share?</li>
+              <li>How did your service project make a difference? What would you do differently if you did it again?</li>
+              <li>What is one big idea you want people to understand when they see your Expo Day work?</li>
+              <li>How have you grown this year at Prisma as a learner, a creator, and a person?</li>
+              <li>What is something you learned this year that you will carry with you long after school is out?</li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">Lower School Hub</footer>
+  <script src="script.js"></script>
+</body>
+</html>

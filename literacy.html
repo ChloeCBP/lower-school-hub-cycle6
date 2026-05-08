@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lower School Hub — Literacy Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
+  <style>
+    body { background: #faf9f6; }
+    .top-bar { background: linear-gradient(90deg,#fc5e48,#f39820,#22c973,#693efe,#fc5e48); }
+    .site-header { background: #faf9f6; border-bottom: 4px solid #693efe; }
+    .branding h1 { color: #693efe; }
+    .branding .tagline { background: #eee9ff; color: #693efe; border: 1px solid #693efe; }
+    .main-nav { background: #faf9f6; border-bottom: 2px solid #eee9ff; }
+    .main-nav a { border-color: #eee9ff; color: #1a1a2e; }
+    .main-nav a:hover { background: #eee9ff; color: #693efe; }
+    .main-nav a.active { background: #693efe; color: #fff; border-color: #693efe; }
+    .page-title { color: #693efe; }
+    .section-title { color: #693efe; }
+    .notice { background: #fffbf4; border-left-color: #f39820; }
+    .notice .section-title { color: #b36800; }
+    .table-card { border-color: #eee9ff; }
+    th { background: #eee9ff; color: #693efe; }
+    .lit-card { border-color: #eee9ff; }
+    .lit-card-header { background: linear-gradient(135deg,#693efe,#eee9ff); color: #fff; }
+    .reading-calendar th { background: #eee9ff; color: #693efe; }
+    .schedule-header { background: #693efe; }
+    .week-label { background: #f7f5ff; color: #693efe; border-color: #eee9ff; }
+    .session-num { color: #693efe; }
+    .schedule-row { background: #fff; }
+    .tag-breakout { background: #ffd3ca; color: #8a2010; }
+    .tag-jam { background: #eee9ff; color: #3d1fae; }
+    .tag-feedback { background: #fff7e6; color: #8a5000; }
+    .tag-celebrate, .tag-expo, .tag-prep { background: #f2fdf7; color: #0a5c30; }
+    .schedule-row.is-today .schedule-day, .schedule-row.is-today .schedule-main { background: #f7f5ff; }
+    .schedule-row.is-today .schedule-day { box-shadow: inset 4px 0 0 #693efe; }
+    .reading-calendar td.is-today { box-shadow: inset 0 0 0 3px #693efe; background: #f7f5ff !important; }
+    .reading-calendar td.is-today .reading-date { color: #693efe; }
+    .reading-pages { color: #0a7a44; }
+    .footer { background: #faf9f6; border-top-color: #eee9ff; color: #898989; }
+    a { color: #693efe; }
+  </style>
+</head>
+<body data-page="literacy">
+  <div class="top-bar"></div>
+
+  <header class="site-header">
+    <div class="branding">
+      <div class="subtitle">Lower School Hub</div>
+      <h1>Literacy Lab</h1>
+      <div class="tagline">Reading, writing, and sharing ideas</div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" data-page="today">Today</a>
+    <a href="literacy.html" data-page="literacy">Literacy Lab</a>
+    <a href="theme.html" data-page="theme">Theme Workshop</a>
+    <a href="https://prisma-daily-check.web.app/student.html" target="_blank">Student Daily Check</a>
+    <a href="https://classroom.google.com/c/Nzc0MDk2MDExMjM1" target="_blank">Google Classroom</a>
+    <a href="parents.html" data-page="parents">Parents</a>
+  </nav>
+
+  <main class="container">
+
+    <section class="notice">
+      <h3 class="section-title">Literacy Lab — Cycle 6: Changemakers</h3>
+      <p>This cycle, Literacy Lab is all about telling your story! You'll look back on your year at Prisma, update your portfolio site with everything you've created, and reflect on how you've grown as a reader, writer, and thinker.</p>
+    </section>
+
+    <section class="table-card">
+      <h3 class="section-title">Breakout Room Overview</h3>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Date</th>
+            <th>Session</th>
+            <th>Breakout Room Overview</th>
+          </tr>
+          <tr><td>Tue May 19</td><td>Building Your Story: Cycle 1</td><td>Working groups update their portfolio sites, sorted by where they are in the process — from finishing a Brainy Bio to polishing all cycle pages.</td></tr>
+          <tr><td>Wed May 20</td><td>Continuing to Build Your Story</td><td>Working groups continue updating their portfolio sites to tell the story of Cycles 2 through 5.</td></tr>
+          <tr><td>Tue May 26</td><td>Our Voices in Action</td><td>Small groups complete the Tangram Challenge, practicing Communication and Collaboration skills.</td></tr>
+          <tr><td>Mon Jun 1</td><td>The Finishing Touch</td><td>Working groups make final portfolio site updates before Expo Day.</td></tr>
+          <tr><td>Tue Jun 2</td><td>Sharing Your Story</td><td>Full pod sharing session (combined cohorts) — learners share their portfolio sites and celebrate each other's stories.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="schedule-wrap">
+      <div class="schedule-header">📚 Literacy Lab — May 18 to Jun 4</div>
+
+      <div class="week-block">
+        <div class="week-label">Week 1 · May 18–21 · Telling Your Story</div>
+
+        <div class="schedule-row" data-date="2026-05-18">
+          <div class="schedule-day">Mon May 18</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">1</span>Telling Your Story</div>
+            <div class="schedule-sub">This or That · Tell Your Story · introduce the portfolio site prompt</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-05-19">
+          <div class="schedule-day">Tue May 19</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">2</span>Building Your Story: Cycle 1 <span class="tag tag-breakout">Breakouts</span></div>
+            <div class="schedule-sub">One Word for Cycle One · Google Sites tutorial · update Cycle 1 page</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-05-20">
+          <div class="schedule-day">Wed May 20</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">3</span>Continuing to Build Your Story <span class="tag tag-breakout">Breakouts</span></div>
+            <div class="schedule-sub">Portfolio Page Audit · update Cycles 2 &amp; 3 pages</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-05-21">
+          <div class="schedule-day">Thu May 21</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">4</span>Own It: The Initiative &amp; Follow Through Challenge</div>
+            <div class="schedule-sub">Review Initiative &amp; Follow Through · The Lost Story Escape Room</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-block">
+        <div class="week-label">Week 2 · May 26–28 · Prisma Powers</div>
+
+        <div class="schedule-row">
+          <div class="schedule-day">Mon May 25</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line" style="color:#898989;">No Prisma — Memorial Day</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-05-26">
+          <div class="schedule-day">Tue May 26</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">5</span>Our Voices in Action <span class="tag tag-breakout">Breakouts</span></div>
+            <div class="schedule-sub">Review Communication &amp; Collaboration · Tangram Challenge</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-05-27">
+          <div class="schedule-day">Wed May 27</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">6</span>Curious Minds at Work <span class="tag tag-breakout">Breakouts</span></div>
+            <div class="schedule-sub">Review Applied Curiosity · The Curiosity Files: Animal Edition</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-05-28">
+          <div class="schedule-day">Thu May 28</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">7</span>Think. Build. Revise.</div>
+            <div class="schedule-sub">Review Innovator's Mindset · The Blueprint Challenge · paper tower design</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-block">
+        <div class="week-label">Week 3 · Jun 1–4 · Finish &amp; Celebrate</div>
+
+        <div class="schedule-row" data-date="2026-06-01">
+          <div class="schedule-day">Mon Jun 1</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">8</span>The Finishing Touch <span class="tag tag-breakout">Breakouts</span></div>
+            <div class="schedule-sub">Portfolio Page Audit · final working time to polish your site</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-06-02">
+          <div class="schedule-day">Tue Jun 2</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">9</span>Sharing Your Story <span class="tag tag-celebrate">Celebrate</span> <span class="tag tag-breakout">Breakouts</span></div>
+            <div class="schedule-sub">Feelings Check · full pod sharing session · celebrate your portfolio site</div>
+          </div>
+        </div>
+
+        <div class="schedule-row">
+          <div class="schedule-day">Wed Jun 3</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line" style="color:#898989;">Expo Day Prep — No Lit Lab</div>
+          </div>
+        </div>
+
+        <div class="schedule-row" data-date="2026-06-04">
+          <div class="schedule-day">Thu Jun 4</div>
+          <div class="schedule-main">
+            <div class="schedule-title-line"><span class="session-num">10</span>That's a Wrap! <span class="tag tag-celebrate">Celebrate</span></div>
+            <div class="schedule-sub">Prisma Powers Kahoot · I Used to… Now I… · celebrate your year!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Lower School Hub</footer>
+  <script src="script.js"></script>
+</body>
+</html>
